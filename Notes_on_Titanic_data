@@ -1,0 +1,56 @@
+1. The data will be split into two groups, training set (train.csv) and test set (test.csv)
+  - The training set should be used ot build machine learning models, and will be provided supervised data such that there exist ground truth data based on the features given
+  - The test set shold be used to see how the model performs on unseen data, the test set does not provide the ground truth data as it is up to the model to predict on this data
+Data Dictionary:
+Survivial - a boolean representing whether a person survived or not denoted by 0=no and 1 = Yes
+pclass - The ticket class 1=1st class, 2 = 2nd class, and 3 = 3rd class
+sex - is either male or female in this data set
+age - the age of the person given in years
+sibsp -  the number of sibilings and spouses aboard the titanic given as an integer
+parch - the number of parents and childern aboard the titanic given as an integer
+ticket - the ticket number given as an integer
+fare - the passenger fare in dollars given as  (float, or int?)
+cabin -  the cabin number given as an integer
+embarked - the port of embarkment given as a single letter to denote the port, C = Cherbourg, Q = Queenstown, and S = Southhampton
+
+Varible notes from Kaggle
+pclass: A proxy for socio-economic status (SES)
+1st = Upper
+2nd = Middle
+3rd = Lower
+
+age: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5
+
+sibsp: The dataset defines family relations in this way...
+Sibling = brother, sister, stepbrother, stepsister
+Spouse = husband, wife (mistresses and fiancés were ignored)
+
+parch: The dataset defines family relations in this way...
+Parent = mother, father
+Child = daughter, son, stepdaughter, stepson
+Some children travelled only with a nanny, therefore parch=0 for them.
+
+Taking a look at the data there are a few things I notice, there are 12 columns
+-passengerId - the primary key for the person
+-Columns that have missing data values: Age, Cabin, Embarked
+- Some indivduals have the same ticket as there is 681 unique values but there are 891 passengers
+- more poeple died than suvived
+- around half of the people were in thrid class,  and then almost evenely distributed for he rest between the 1st and second class
+- There are all unique names that are given as strings
+- The super majority of people on the titanic were men accounting for 65% of the people in this data sample and 35% female
+- Age ranges from .42 to 80 years, .42 years implies less than 1 year old
+- The age is skewd right as the there is a large tail to the right in the data, however there is a lot of missing ages needed to be interpreted, average age is around 30 and std is 14.5 years
+- Most people have no sibilings or parents aboard in this data set, with only a small amount having more than 1
+- Most people don't have children and their parents aboard the ship in this sample
+- The fare amounts most people paid around the same amount except with a few people having paid extremly large sums of money, mean is 32 and std is 50, can't be less than 0 so these numbers will always be positive, therefore has a lognormal strucutre
+- There are only 147 different cabins listed
+- Only 2 people have their port embarked missing, but most poeple embarked from south hampton and then ~20 from Cherbourg, and the other is most likely from Queenstown
+
+Metric:
+The number of passengers correctly predicted, also knows as accuracy TP+TN/(TP+TN+FP+FN)
+
+Submission:
+should be a csv with 2 columns {"PassengerId","Survived"} - exactly 418 entries plus a header row, will show an error if extra columns or rows submitted, 1 for survived and 0 for deceased
+
+Forum:
+Ask questions in the competions forum to get questions answered about my code from the community if having trouble
