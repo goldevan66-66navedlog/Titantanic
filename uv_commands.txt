@@ -1,0 +1,4 @@
+ActionCommandAdd a packageuv add <package_name>
+Add dev packageuv add --dev <package_name>
+Run a scriptuv run <file.py>
+Update uvuv self update

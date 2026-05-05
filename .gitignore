@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Tooling
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# UV lock file (Optional: usually kept for apps, ignored for libraries)
+# uv.lock 
+
+# VS Code settings (Optional: keep if you want shared team settings)
+.vscode/

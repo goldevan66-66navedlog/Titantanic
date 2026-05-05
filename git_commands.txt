@@ -1,0 +1,27 @@
+# --- GIT CHEAT SHEET ---
+
+# 1. PREPARE CHANGES
+git status               # See what has changed
+git diff                 # See specific line changes
+git add .                # Stage all changes for commit
+git add <file>           # Stage a specific file only
+
+# 2. SAVE CHANGES
+git commit -m "message"  # Save staged changes with a note
+git commit --amend       # Fix the last commit (don't use if already pushed)
+
+# 3. SYNC WITH REMOTE (GitHub/GitLab)
+git pull                 # Get latest changes from others
+git push                 # Upload your commits to the server
+git push -u origin main  # Push and set 'main' as default for future pushes
+
+# 4. BRANCHING
+git checkout -b <name>   # Create and switch to a new branch
+git switch <name>        # Switch to an existing branch
+git branch               # List all local branches
+
+# 5. UNDOING & STASHING
+git restore <file>       # Discard changes to a file (revert to last commit)
+git stash                # Temporarily hide uncommitted changes
+git stash pop            # Bring back your hidden changes
+git log --oneline        # View a simplified history of commits
