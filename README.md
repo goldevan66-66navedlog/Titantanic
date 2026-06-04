@@ -1,2 +1,17 @@
-# Titantanic
-This repository will serve to store all the data, code, and descriptions/thoughts that are involved with solving the titantic problem on Kaggle
+# Titanic ML System
+
+## Problem Statement
+
+## Approach
+
+## Data Exploration
+
+## Feature Engineering
+
+## Models & Performance
+
+## Results
+
+## Error Analysis
+
+## How to run
